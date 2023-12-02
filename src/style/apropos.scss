@@ -1,0 +1,17 @@
+.apropos{
+    .banner-img{
+    height: 111px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    background-image:   linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+                        url("../img/kalen-emsley.jpg");
+    background-size: 100%, 115%;
+    background-position:0px, -25px -72px;
+    background-color: #F6F6F6;
+    }
+    .valeurs{
+        display: flex;
+        flex-flow: column;
+        gap: 20px;
+    }
+}
