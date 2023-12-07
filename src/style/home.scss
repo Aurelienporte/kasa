@@ -1,13 +1,13 @@
+/****** SMARTPHONE ******/ /****** SMARTPHONE ******/ /****** SMARTPHONE ******/
 main{
-    padding: 0 20px;
     box-sizing: border-box;
     width: 100%;
-    .banner-img{
+    .home-banner{
         display: flex;
         align-items: center;
         height: 111px;
-        padding-left: 16px;
-        margin-bottom: 22px;
+        width: calc(100% - 40px);
+        margin: 27px auto 22px;
         border-radius: 10px;
         background-image:   linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
                             url("../img/banner.jpg");
@@ -15,16 +15,48 @@ main{
         background-position:0px, -141px -152px;
         background-color: #F6F6F6;
         p{
+            margin-left: 16px;
             width: 217px;
             font-size: 24px;
             color: #fff;
         }
     }
-    ul{
+    .conteneur-annonces{
         display: flex;
         flex-flow: column;
         align-items: center;
         gap: 22px;
+        margin-bottom: 27px;
+    }
+
+    /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
+    
+    @media(min-width:769px){
+        .home-banner{
+            height: 223px;
+            width: calc(100% - 200px);
+            margin: 50px auto 43px;
+            border-radius: 25px;
+            background-size: 100%, 100%;
+            background-position:0px, 0px -300px;
+            p{
+                font-size: 48px;
+                width: 100%;
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+        .conteneur-annonces{
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 50px 60px;
+            width: calc(100% - 200px);
+            box-sizing: border-box;
+            padding: 56px 50px 43px;
+            margin: 0 auto 50px;
+            background-color: #F6F6F6;
+            border-radius: 25px;
+        }
     }
 }
 

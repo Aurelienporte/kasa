@@ -5,11 +5,11 @@ import annonces from '../annonces.json'
 function Home (){
     return(
             <main>
-                <div className="banner-img">
+                <div className="home-banner">
                     <p>Chez vous, partout et ailleurs</p>
                 </div>
                 <nav>
-                    <ul>
+                    <ul className="conteneur-annonces">
                         {annonces.map(annonce =>
                             <Carte
                                 key={annonce.id}

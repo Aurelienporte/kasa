@@ -5,8 +5,8 @@
   list-style-type: none;
 }
 #root{
+  min-height: calc(100vh + 209px);
   display: flex;
   flex-flow: column;
   align-items: center;
-  gap: 27px;
 }

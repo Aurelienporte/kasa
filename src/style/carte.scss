@@ -1,7 +1,8 @@
+/****** SMARTPHONE ******/ /****** SMARTPHONE ******/ /****** SMARTPHONE ******/
 .carte{
     position: relative;
     height: 255px;
-    width: 100%;
+    width: calc(100% - 40px);
     img{
         width: 100%;
         height: 100%;
@@ -24,5 +25,12 @@
             font-size: 18px;
             color: #fff;
         }
+    }
+
+    /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
+    
+    @media(min-width:769px){
+        height: calc((100vw - 420px)/3); /*Garde une proportion carrée*/
+        width: calc((100% - 120px)/3); /*prend en compte la scroll bar du navigateur*/
     }
 }

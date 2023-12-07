@@ -4,7 +4,7 @@ import "../style/apropos.scss"
 function Apropos(){
     return(
         <main className="apropos">
-            <div className="banner-img"></div>
+            <div className="apropos-banner"></div>
             <ul className="valeurs">
                 <Collapse
                     title="Fiabilité"

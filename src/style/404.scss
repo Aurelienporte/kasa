@@ -1,0 +1,37 @@
+/****** SMARTPHONE ******/ /****** SMARTPHONE ******/ /****** SMARTPHONE ******/
+.err-404{
+    flex-basis: 200px;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    h1{
+        font-weight: 700;
+        font-size: 96px;
+        color: #FF6060;
+    }
+    p{
+        color: #FF6060;
+        font-size: 18px;
+        text-align: center;
+    }
+    a{
+        color: #FF6060;
+        font-size: 14px;
+    }
+
+    /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
+    
+    @media (min-width: 769px){
+        h1{
+           font-size: 288px; 
+        }
+        p{
+            font-size: 36px;
+        }
+        a{
+            font-size: 18px;
+        }
+    }
+}
