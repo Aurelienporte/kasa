@@ -1,9 +1,8 @@
 /****** SMARTPHONE ******/ /****** SMARTPHONE ******/ /****** SMARTPHONE ******/
 .collapse{
     width: calc(100% - 40px);
-    height: 30px;
     overflow: hidden;
-    transition: all 1s ease;
+    transition: 1s ease-in max-height;
     .barre{
         display: flex;
         justify-content: space-between;
@@ -25,20 +24,38 @@
             border: none;
             background-color: transparent;
             color: #fff;
-        }     
+            transform: rotate(0deg);
+            transition: 1s ease transform;
+            &.arrow-down{
+                transform: rotate(180deg);
+            }
+        }
+
     }
     p{
         border-radius: 5px;
-        padding: 20px;
         font-weight: 400;
         font-size: 12px;
         color: #FF6060;
         background-color: #F6F6F6;
-        transition: height 2s ease;
+        z-index: -1;
+        position: relative;
+        &.fold {
+            visibility: hidden;
+            max-height: 0px;
+            padding: 20px 20px 0;
+            transition: 1s ease-in all;
+        }
+        &.unfold {
+            visibility: visible;
+            max-height: 250px;
+            padding: 20px;
+            transition: 1s ease-in all; 
+        } 
     }
 
     /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
-    
+
     @media(min-width:769px){
         width: calc(100% - 417px);
         height: 52px;
@@ -54,7 +71,4 @@
             }
         }
     }
-}
-.collapse:hover {
-    height: 100px;
 }

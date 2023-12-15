@@ -18,13 +18,13 @@ header{
         text-decoration: none;
         text-transform: uppercase;
         }
-        & a.underline{
+        & a.active{
             text-decoration: underline;
         }
     }
 
     /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
-    
+
     @media (min-width:769px){
         width: calc(100% - 200px);
         margin-top: 40px;
