@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './style/index.scss';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import Apropos from './pages/Apropos';
-import Logement from './pages/Logement';
-import Page404 from './pages/404';
+import './style/index.scss';
 import reportWebVitals from './reportWebVitals';
-import annonces from './annonces.json'
+import KasaRoutes from './components/KasaRoutes'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -17,7 +13,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Header></Header>
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/Apropos' element={<Apropos />}></Route>
         <Route path='/Logement' element={<Logement/>}></Route>
@@ -29,7 +25,8 @@ root.render(
           </Route>)}
 
         <Route path='/*' element={<Page404 />}></Route>
-      </Routes>
+      </Routes> */}
+     <KasaRoutes></KasaRoutes>
     </BrowserRouter>
     <Footer />
   </React.StrictMode>

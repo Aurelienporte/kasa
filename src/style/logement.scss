@@ -1,0 +1,64 @@
+.accomodation{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 27px 20px;
+    h1, .location{
+        color: #ff6060;
+        width: 100%;
+        text-align: left;
+    }
+    h1{
+        font-size: 18px;
+        margin-top: 14px;
+    }
+    .location,.seller-info{
+        margin: 16px 0 13px;
+    }
+    .location{
+        font-size: 15px;
+    }
+    .tags-array{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        gap: 10px;
+        width: 100%;
+        .tag{
+            height: 18px;
+            min-width: 84px;
+            padding: 0 10px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #fff;
+            background-color: #ff6060;
+        }
+    }
+    .seller-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .seller-picture {
+            display: flex;
+            align-items: center;
+            gap:10px;
+            .names{
+                display: flex;
+                flex-flow: column;
+                align-items: flex-end;
+                color: #ff6060;
+                font-size: 13px;
+            }
+            img{
+                height: 33px;
+                border-radius: 50%;  
+            }
+        }
+    }
+    .collapse-container{
+        display: flex;
+        flex-flow: column;
+        gap: 20px;
+    }
+}

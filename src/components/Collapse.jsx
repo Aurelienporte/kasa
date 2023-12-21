@@ -2,12 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons"
 import "../style/collapse.scss"
 import { useState } from "react"
-function Collapse ({title, texte}){
+
+function Collapse ({title, text, isList}){
     const [collapse,setcollapse]=useState("fold")
     let [height, setHeight]= useState(30);
     const [rotation, setRotation]=useState("")
+
     return(
-        <li className="collapse"
+        <div className="collapse"
             style={{maxHeight:`${height}px`}}
         >
             <div className="barre">
@@ -31,10 +33,8 @@ function Collapse ({title, texte}){
                     <FontAwesomeIcon icon={faChevronUp} />
                 </button>
             </div>
-            <p  className={collapse}>
-                {texte}
-            </p>
-        </li>
+            {isList? ( <ul className={collapse}>{text}</ul> ):( <p className={collapse}>{text}</p> )}
+        </div>
     )
 }
 

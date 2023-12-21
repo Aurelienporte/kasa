@@ -1,0 +1,17 @@
+.star-array{
+    display: flex;
+    gap: 7px;
+    padding-left: 2px;
+    & .full-stars {
+        color: #ff6060;
+        
+    }
+    & .empty-stars{
+        color: #e3e3e3;
+    }
+    & .full-stars, .empty-stars{
+        font-size: 13px;
+        display: flex;
+        gap: 7px;
+    }
+}

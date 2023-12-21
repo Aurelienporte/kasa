@@ -4,7 +4,7 @@ import "../style/carte.scss";
 function Carte({id, title, cover}){
     return(
         <li className="carte">
-            <Link to={'Logement/'+id}>
+            <Link to={"Logement/"+id}>
                 <img src={cover} alt="appart en location" />
                 <div className="gradient">
                     <p>{title}</p>

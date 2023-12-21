@@ -1,48 +1,56 @@
-// import Collapse from "../components/Collapse"
+import Collapse from "../components/Collapse"
 import Slideshow from "../components/Slideshow"
-import { useEffect, useState } from "react";
+import StarRating from "../components/StarRating";
 import annonces from '../annonces.json'
+import { useParams } from "react-router-dom";
+import "../style/logement.scss"
 
 function Logement(){
-    const [data, setData] = useState(null);
-    useEffect(() => {
-        const idFromURL = window.location.pathname.slice(10);
-        const accomodation = annonces.find((appart) => appart.id ===idFromURL);
-        console.log("un truc")
-        setData(accomodation)
-        console.log(data)
-    });
+    let params = useParams()
+
+    const accomodation = annonces.find((appart) => appart.id ===params.id);
+    console.log(accomodation);
+    let namesToSplit=accomodation.host.name;
+    const splits = namesToSplit.split(/(\s)/);
+    const name = splits[2]
+    const surname = splits[0]
 
     return(
-        
-        <main>
+        <main className="accomodation">
             <Slideshow />
-            <div>
-                <div>
-                    <h1>{data.title}</h1>
-                    <p>{data.location}</p>
-                    {/* <div className="tags">
-                        {data.tags.map(tag => <span>{tag}</span>)}
-                    </div> */}
-                </div>
-                <div>
-                    <div>
-                        <p>{data.host.name}</p>
-                        <img src={data.host.picture} alt="portrait du proprio" />
+                    <h1>{accomodation.title}</h1>
+                    <p className="location">{accomodation.location}</p>
+                    <div className="tags-array">
+                        {accomodation.tags.map(tag =>   <span 
+                                                            key={tag.toString()}
+                                                            className="tag"
+                                                        >
+                                                            {tag}
+                                                        </span>
+                        )}
                     </div>
-                    <div>{data.rating}</div>
+                <div className="seller-info">
+                    <StarRating score={accomodation.rating}></StarRating>
+                    <div className="seller-picture">
+                        <div className="names">
+                            <span>{surname}</span>
+                            <span>{name}</span>
+                        </div>
+                        <img src={accomodation.host.picture} alt="portrait du propriétaire" />
+                    </div>
                 </div>
-            </div>
-            {/* <div>
-                <Collapse 
-                    title="description"
-                    texte={data.description}
-                />
-                <Collapse
-                    title="équipements"
-                    texte={data.equipments.map(item =><li>{item}</li>)}
-                />
-            </div> */}
+                <div className="collapse-container">
+                    <Collapse
+                        isList={false}
+                        title="description"
+                        text={accomodation.description}
+                    />
+                    <Collapse
+                        isList={true}
+                        title="équipements"
+                        text={accomodation.equipments.map(item =><li key={item.toString()}>{item}</li>)}
+                    />
+                </div>
         </main>
     )
 }

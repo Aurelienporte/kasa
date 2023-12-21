@@ -1,15 +1,16 @@
 /****** SMARTPHONE ******/ /****** SMARTPHONE ******/ /****** SMARTPHONE ******/
 .apropos{
+    padding: 0 20px;
     .apropos-banner{
-    height: 111px;
-    width: calc(100% - 40px);
-    margin: 19px auto;
-    border-radius: 10px;
-    background-image:   linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
-                        url("../img/kalen-emsley.jpg");
-    background-size: 100%, 115%;
-    background-position:0px, -25px -72px;
-    background-color: #F6F6F6;
+        height: 111px;
+        width: 100%;
+        margin: 19px auto;
+        border-radius: 10px;
+        background-image:   linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
+                            url("../img/kalen-emsley.jpg");
+        background-size: 100%, 115%;
+        background-position:0px, -25px -72px;
+        background-color: #F6F6F6;
     }
     .valeurs{
         display: flex;
