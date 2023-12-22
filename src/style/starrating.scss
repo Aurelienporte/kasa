@@ -14,4 +14,10 @@
         display: flex;
         gap: 7px;
     }
+    @media(min-width:769px){
+        & .full-stars, .empty-stars{
+            font-size: 24px;
+            gap: 15px;
+        } 
+    }
 }

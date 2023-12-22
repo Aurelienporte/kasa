@@ -17,7 +17,9 @@ function Logement(){
 
     return(
         <main className="accomodation">
-            <Slideshow />
+            <Slideshow pictures={accomodation.pictures}/>
+            <div className="info-container">
+                <div className="accomodation-info">
                     <h1>{accomodation.title}</h1>
                     <p className="location">{accomodation.location}</p>
                     <div className="tags-array">
@@ -29,6 +31,7 @@ function Logement(){
                                                         </span>
                         )}
                     </div>
+                </div>
                 <div className="seller-info">
                     <StarRating score={accomodation.rating}></StarRating>
                     <div className="seller-picture">
@@ -39,18 +42,19 @@ function Logement(){
                         <img src={accomodation.host.picture} alt="portrait du propriétaire" />
                     </div>
                 </div>
-                <div className="collapse-container">
-                    <Collapse
-                        isList={false}
-                        title="description"
-                        text={accomodation.description}
-                    />
-                    <Collapse
-                        isList={true}
-                        title="équipements"
-                        text={accomodation.equipments.map(item =><li key={item.toString()}>{item}</li>)}
-                    />
-                </div>
+            </div>
+            <div className="collapse-container">
+                <Collapse
+                    isList={false}
+                    title="description"
+                    text={accomodation.description}
+                />
+                <Collapse
+                    isList={true}
+                    title="équipements"
+                    text={accomodation.equipments.map(item =><li key={item.toString()}>{item}</li>)}
+                />
+            </div>
         </main>
     )
 }

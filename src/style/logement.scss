@@ -12,9 +12,9 @@
         font-size: 18px;
         margin-top: 14px;
     }
-    .location,.seller-info{
-        margin: 16px 0 13px;
-    }
+    // .location,.seller-info{
+    //     margin: 16px 0 13px;
+    // }
     .location{
         font-size: 15px;
     }
@@ -30,6 +30,7 @@
             padding: 0 10px;
             border-radius: 4px;
             font-size: 13px;
+            text-align: center;
             color: #fff;
             background-color: #ff6060;
         }
@@ -60,5 +61,54 @@
         display: flex;
         flex-flow: column;
         gap: 20px;
+    }
+
+    /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
+
+    @media (min-width:769px){
+        align-items: flex-start;
+        padding: 50px 100px;
+        .info-container{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 24px;
+            .accomodation-info{
+                h1{
+                    font-size: 28px;
+                    margin-top: 17px;
+                }
+                .location{
+                    font-size: 19px;
+                }
+                .tags-array{
+                    width: auto;
+                    margin: 24px 0;
+                    .tag{
+                        height: 25px;
+                        min-width: 115px;
+                        padding: 7px 10px 0;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+        .seller-info{
+            align-self: flex-start;
+            flex-flow: column-reverse;
+            gap: 27px;
+            align-items: flex-end;
+            width: auto;
+            .seller-picture{
+                img{
+                    height: 64px; 
+                }
+            }
+        }
+        .collapse-container{
+            flex-flow: row;
+            gap:76px;
+            height: 52px;
+        }  
     }
 }
