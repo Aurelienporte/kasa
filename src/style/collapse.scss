@@ -2,7 +2,12 @@
 .collapse{
     width: 100%;
     overflow: hidden;
+    max-height: 30px;
     transition: 1s ease-in max-height;
+    &.active{
+        max-height: 250px;
+        transition: 1s ease-in max-height;
+    }
     .barre{
         display: flex;
         justify-content: space-between;
@@ -17,6 +22,7 @@
             font-weight: 500;
             font-size: 13px;
             color: #fff;
+            text-transform: capitalize;
         }
         button{
             height: 15px;
@@ -30,14 +36,13 @@
                 transform: rotate(180deg);
             }
         }
-
     }
     p, ul{
         border-radius: 5px;
         font-weight: 400;
         font-size: 12px;
         color: #FF6060;
-        background-color: #F6F6F6;
+        background-color: #f6f6f6;
         z-index: -1;
         position: relative;
         &.fold {
@@ -56,18 +61,35 @@
 
     /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
 
-    @media(min-width:769px){
+    @media(min-width:1024px){
         width: calc(100% - 417px);
-        height: 52px;
+        max-height: 52px;
         .barre{
             height: 52px;
             padding: 0 16px;
             h2{
-                font-size: 24px;
+                font-size: 18px;
             }
             button{
                 font-size: 24px;
                 height: 24px;
+            }
+        }
+    }
+
+    /****** TABLETTE ******//****** TABLETTE ******//****** TABLETTE ******/
+
+    @media(min-width:768px ) and (max-width:1023px){
+        max-height: 40px;
+        .barre{
+            height: 40px;
+            padding: 0 14px;
+            h2{
+                font-size: 15px;
+            }
+            button{
+                font-size: 18px;
+                height: 18px;
             }
         }
     }

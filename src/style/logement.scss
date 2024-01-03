@@ -12,11 +12,9 @@
         font-size: 18px;
         margin-top: 14px;
     }
-    // .location,.seller-info{
-    //     margin: 16px 0 13px;
-    // }
     .location{
         font-size: 15px;
+        margin: 16px 0 13px;
     }
     .tags-array{
         display: flex;
@@ -40,6 +38,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        margin: 16px 0 13px;
         .seller-picture {
             display: flex;
             align-items: center;
@@ -65,7 +64,7 @@
 
     /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
 
-    @media (min-width:769px){
+    @media (min-width:1024px){
         align-items: flex-start;
         padding: 50px 100px;
         .info-container{
@@ -80,6 +79,7 @@
                 }
                 .location{
                     font-size: 19px;
+                    margin: 0;
                 }
                 .tags-array{
                     width: auto;
@@ -99,6 +99,7 @@
             gap: 27px;
             align-items: flex-end;
             width: auto;
+            margin: 0;
             .seller-picture{
                 img{
                     height: 64px; 
@@ -108,7 +109,55 @@
         .collapse-container{
             flex-flow: row;
             gap:76px;
-            height: 52px;
+        }  
+    }
+
+    /****** TABLETTE ******//****** TABLETTE ******//****** TABLETTE ******/
+
+    @media(min-width:768px ) and (max-width:1023px){
+        padding: 35px 60px;
+        .info-container{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 24px;
+            .accomodation-info{
+                h1{
+                    font-size: 28px;
+                    margin-top: 17px;
+                }
+                .location{
+                    font-size: 19px;
+                    margin: 0;
+                }
+                .tags-array{
+                    width: auto;
+                    margin: 24px 0;
+                    .tag{
+                        height: 20px;
+                        min-width: 100px;
+                        padding: 5px 10px 0;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+        .seller-info{
+            align-self: flex-start;
+            flex-flow: column-reverse;
+            gap: 27px;
+            align-items: flex-end;
+            width: auto;
+            margin: 0;
+            .seller-picture{
+                img{
+                    height: 64px; 
+                }
+            }
+        }
+        .collapse-container{
+            flex-flow: row;
+            gap:45px;
         }  
     }
 }

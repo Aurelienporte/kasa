@@ -5,7 +5,7 @@ function Carte({id, title, cover}){
     return(
         <li className="carte">
             <Link to={"Logement/"+id}>
-                <img src={cover} alt="appart en location" />
+                <img src={cover} alt="appartement en location" />
                 <div className="gradient">
                     <p>{title}</p>
                 </div>

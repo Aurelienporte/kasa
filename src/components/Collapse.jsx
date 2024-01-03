@@ -4,28 +4,30 @@ import "../style/collapse.scss"
 import { useState } from "react"
 
 function Collapse ({title, text, isList}){
-    const [collapse,setcollapse]=useState("fold")
-    let [height, setHeight]= useState(30);
+    const [isFold,setFold]=useState("fold")
     const [rotation, setRotation]=useState("")
+    const [active, setActive]=useState("")
 
     return(
-        <div className="collapse"
-            style={{maxHeight:`${height}px`}}
-        >
+        <div className={`collapse ${active}`}>
             <div className="barre">
                 <h2>{title}</h2>
-                <button className={rotation}
+
+                {/* Change les class au clic selon l'état */}
+                
+                <button 
+                    className={rotation}
                     onClick={
                         ()=>{
-                            if (collapse==="fold"){
-                                setcollapse("unfold");
-                                setHeight(250)
+                            if (isFold==="fold"){
+                                setFold("unfold");
                                 setRotation("arrow-down")
+                                setActive("active")
                             }
                             else{
-                                setcollapse("fold");
-                                setHeight(30);
+                                setFold("fold");
                                 setRotation("") 
+                                setActive("")
                             }
                         }
                     }
@@ -33,7 +35,10 @@ function Collapse ({title, text, isList}){
                     <FontAwesomeIcon icon={faChevronUp} />
                 </button>
             </div>
-            {isList? ( <ul className={collapse}>{text}</ul> ):( <p className={collapse}>{text}</p> )}
+
+            {/* Injecte un <ul></ul> ou un <p></p> selon nature du texte passé au composantI */}
+
+            {isList? ( <ul className={isFold}>{text}</ul> ):( <p className={isFold}>{text}</p> )}
         </div>
     )
 }

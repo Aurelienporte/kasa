@@ -25,11 +25,15 @@
     }
     & .counter{
         display: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
     }
 
     /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
 
-    @media(min-width:769px){
+    @media(min-width:1024px){
         & .arrow{
             height: 80px;
             font-size: 78px;
@@ -46,12 +50,28 @@
         }
         & .counter{
             display: inline;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
             bottom: 30px ;
             font-size: 18px;
-            color: white;
+        }
+    }
+
+    /****** TABLETTE ******//****** TABLETTE ******//****** TABLETTE ******/
+
+    @media(min-width:768px ) and (max-width:1023px){
+        & .arrow{
+            height: 50px;
+            font-size: 48px;
+        }
+        & .arrow-left{
+            left: 14px;
+        }
+        & .arrow-right{
+            right: 14px;
+        }
+        & .counter{
+            display: inline;
+            bottom: 14px ;
+            font-size: 14px;
         }
     }
 }

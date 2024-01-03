@@ -25,7 +25,7 @@ header{
 
     /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
 
-    @media (min-width:769px){
+    @media (min-width:1024px){
         width: calc(100% - 200px);
         margin-top: 40px;
         & img{
@@ -38,5 +38,11 @@ header{
                 text-transform: none;
             }
         }
+    }
+
+    /****** TABLETTE ******//****** TABLETTE ******//****** TABLETTE ******/
+
+    @media(min-width:768px) and (max-width:1023px){
+        width: calc(100% - 120px);
     }
 }

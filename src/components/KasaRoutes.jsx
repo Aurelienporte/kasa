@@ -13,13 +13,18 @@ function KasaRoutes(){
       <Route path='/' element={<Home />}></Route>
       <Route path='/Apropos' element={<Apropos />}></Route>
       <Route path='/Logement/:id' element={<Logement/>}></Route>
-      {annonces.map(annonce =>
 
+      {/* Pour chaque id de annonces, crée un chemin spécifique */}
+
+      {annonces.map(annonce =>
       <Route
           key={annonce.id}
           path={'/Logement/:'+annonce.id}
           element={<Logement/>}>
       </Route>)}
+
+      {/* Redirection des url erronées sur une page d'erreur */}
+      
       <Route path='/*' element={<Page404 />}></Route>
     </Routes>
   )

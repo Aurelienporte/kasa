@@ -14,10 +14,22 @@
         display: flex;
         gap: 7px;
     }
-    @media(min-width:769px){
+
+    /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
+    
+    @media(min-width:1024px){
         & .full-stars, .empty-stars{
             font-size: 24px;
             gap: 15px;
+        } 
+    }
+
+    /****** TABLETTE ******//****** TABLETTE ******//****** TABLETTE ******/
+
+    @media(min-width:768px ) and (max-width:1023px){
+        & .full-stars, .empty-stars{
+            font-size: 18px;
+            gap: 10px;
         } 
     }
 }

@@ -1,5 +1,8 @@
 /****** SMARTPHONE ******/ /****** SMARTPHONE ******/ /****** SMARTPHONE ******/
 .apropos{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
     padding: 0 20px;
     .apropos-banner{
         height: 111px;
@@ -22,10 +25,11 @@
 
     /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
     
-    @media (min-width:769px){
+    @media (min-width:1024px){
+        padding: 0 100px;
         .apropos-banner{
             height: 223px;
-            width: calc(100% - 200px); 
+            width: 100%; 
             border-radius: 25px;
             margin: 38px auto; 
             background-size: 100%, 100%;
@@ -33,8 +37,25 @@
         }
         .valeurs{
             gap: 30px;
+            width: 1022px;
             margin-bottom: 38px;
         }
+    }
 
+    /****** TABLETTE ******//****** TABLETTE ******//****** TABLETTE ******/
+
+    @media(min-width:768px ) and (max-width:1023px){
+        padding: 0 60px;
+        .apropos-banner{
+            height: 165px;
+            border-radius: 15px;
+            margin: 28px auto; 
+            background-size: 100%, 100%;
+            background-position:0px, 0px -150px;
+        }
+        .valeurs{
+            gap: 25px;
+            margin-bottom: 28px;
+        }
     }
 }

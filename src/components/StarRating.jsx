@@ -16,7 +16,10 @@ function StarRating({score}){
     } 
     return(
         <div className="star-array">
-            {fullStars.length!==0 &&
+
+            {/* Affiche les étoiles pleines, s'il y en a */}
+
+            {fullStars.length>0 &&
                 <div className="full-stars">
                     {fullStars.map(
                         (fullStar) =>   <FontAwesomeIcon
@@ -26,7 +29,10 @@ function StarRating({score}){
                     )} 
                 </div>
             }
-            {emptyStars.length!==0 &&
+
+            {/* Affiche les étoiles vides, s'il y en a */}
+
+            {emptyStars.length>0 &&
                 <div className="empty-stars">
                     {emptyStars.map(
                         (emptyStar) =>  <FontAwesomeIcon

@@ -1,10 +1,8 @@
 import Collapse from "../components/Collapse";
 import "../style/apropos.scss"
-import { useParams } from "react-router-dom";
 
 function Apropos(){
-    let params = useParams()
-    console.log(params.truc)
+
     return(
         <main className="apropos">
             <div className="apropos-banner"></div>
