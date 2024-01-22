@@ -1,0 +1,55 @@
+/****** SMARTPHONE ******/ /****** SMARTPHONE ******/ /****** SMARTPHONE ******/
+
+.banner{
+    position: relative;
+    height: 111px;
+    width: 100%;
+    margin: 27px auto 22px;
+    border-radius: 10px;
+    overflow: hidden;
+    img{
+    width: 180%;
+    object-position: -140px -150px;
+    filter: brightness(.7);
+    }
+    p{
+        position: absolute;
+        top: 50%;
+        transform: translate(0%, -50%);
+        margin-left: 16px;
+        width: 217px;
+        font-size: 24px;
+        color: #fff;
+    }
+
+    /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
+
+    @media(min-width:1024px){
+        height: 223px;
+        width: calc(100% - 200px);
+        margin: 50px auto 43px;
+        border-radius: 25px;
+        img{
+            width: 100%;
+            object-position: 0px -280px;
+            }
+        p{
+            font-size: 48px;
+            width: 100%;
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+
+    /****** TABLETTE ******//****** TABLETTE ******//****** TABLETTE ******/
+
+    @media(min-width:768px) and (max-width:1023px){
+        height: 165px;
+        margin: 28px auto; 
+        border-radius: 15px;
+        img{
+            width: 140%;
+            object-position: -70px -220px;
+        }
+    } 
+} 

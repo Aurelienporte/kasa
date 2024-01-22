@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import './style/index.scss';
 import reportWebVitals from './reportWebVitals';
-import KasaRoutes from './components/KasaRoutes'
+import KasaRoutes from './KasaRoutes'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

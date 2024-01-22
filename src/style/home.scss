@@ -3,25 +3,6 @@ main{
     box-sizing: border-box;
     width: 100%;
     padding: 0 20px;
-    .home-banner{
-        display: flex;
-        align-items: center;
-        height: 111px;
-        width: 100%;
-        margin: 27px auto 22px;
-        border-radius: 10px;
-        background-image:   linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
-                            url("../img/banner.jpg");
-        background-size: 100%, 185%;
-        background-position:0px, -141px -152px;
-        background-color: #f6f6f6;
-        p{
-            margin-left: 16px;
-            width: 217px;
-            font-size: 24px;
-            color: #fff;
-        }
-    }
     .conteneur-annonces{
         display: flex;
         flex-flow: column;
@@ -33,20 +14,6 @@ main{
     /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
     
     @media(min-width:1024px){
-        .home-banner{
-            height: 223px;
-            width: calc(100% - 200px);
-            margin: 50px auto 43px;
-            border-radius: 25px;
-            background-size: 100%, 100%;
-            background-position:0px, 0px -300px;
-            p{
-                font-size: 48px;
-                width: 100%;
-                margin-left: 0;
-                text-align: center;
-            }
-        }
         .conteneur-annonces{
             flex-flow: row wrap;
             justify-content: center;
@@ -64,12 +31,6 @@ main{
 
     @media(min-width:768px) and (max-width:1023px){
         padding: 0 60px;
-        .home-banner{
-            height: 165px;
-            margin: 28px auto; 
-            border-radius: 15px;
-            background-position:0px, 0px -270px;
-        }
         .conteneur-annonces{
             flex-flow: row wrap;
             justify-content: center;
