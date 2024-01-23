@@ -35,11 +35,7 @@ function Collapse ({title, children}){
                     <FontAwesomeIcon icon = {faChevronUp} />
                 </button>
             </div>
-
             {children}
-
-            {/* Injecte un <ul></ul> ou un <p></p> selon nature du texte passé au composantI */}
-            {/* {isList? ( <ul className={isFold}>{text}</ul> ):( <p className={isFold}>{text}</p> )} */}
         </div>
     )
 }

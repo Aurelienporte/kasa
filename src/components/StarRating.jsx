@@ -3,45 +3,31 @@ import { faStar } from "@fortawesome/free-solid-svg-icons"
 import "../style/starrating.scss"
 
 function StarRating({score}){
+    let stars = [];
+    let fullstars = +score;
 
-    let fullStars=[];
-    let emptyStars=[];
-    let number= +score;
-
-    for(let i=1; i<=number; i++){
-        fullStars.push(i)
-    } 
-    for(let it=number+1; it<=5; it++){
-        emptyStars.push(it)
-    } 
+    for(let i = 1; i <= 5; i++){
+        if(i <= fullstars){
+            stars.push(
+                <FontAwesomeIcon
+                    className = "full-star"
+                    icon = {faStar}
+                    key = {i}
+                ></FontAwesomeIcon>
+            )
+        }else{
+            stars.push(
+                <FontAwesomeIcon
+                    className = "empty-star"
+                    icon = {faStar}
+                    key = {i}
+                ></FontAwesomeIcon>
+            )
+        }
+    }
     return(
-        <div className="star-array">
-
-            {/* Affiche les étoiles pleines, s'il y en a */}
-
-            {fullStars.length>0 &&
-                <div className="full-stars">
-                    {fullStars.map(
-                        (fullStar) =>   <FontAwesomeIcon
-                                            icon={faStar}
-                                            key={fullStar}
-                                        />
-                    )} 
-                </div>
-            }
-
-            {/* Affiche les étoiles vides, s'il y en a */}
-
-            {emptyStars.length>0 &&
-                <div className="empty-stars">
-                    {emptyStars.map(
-                        (emptyStar) =>  <FontAwesomeIcon
-                                            icon={faStar}
-                                            key={emptyStar}
-                                        />
-                    )}
-                </div>
-            }
+        <div className = "star-array">
+            {stars}
         </div>
     )
 }

@@ -5,12 +5,12 @@ import logo from "../img/kasa_full_logo.svg"
 function Header(){
     return(
         <header>
-            <img src={logo} alt="logo de Kasa" />
+            <img src = {logo} alt = "logo de Kasa" />
                 <nav>
-                    <NavLink to={"/"}>
+                    <NavLink to = {"/"}>
                         Accueil
                     </NavLink>
-                    <NavLink to={"/Apropos"}>
+                    <NavLink to = {"/Apropos"}>
                         &Agrave; propos
                     </NavLink>
                 </nav>    

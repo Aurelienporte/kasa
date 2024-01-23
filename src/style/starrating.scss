@@ -2,34 +2,32 @@
     display: flex;
     gap: 7px;
     padding-left: 2px;
-    & .full-stars {
+    & .full-star {
         color: #ff6060;
         
     }
-    & .empty-stars{
+    & .empty-star{
         color: #e3e3e3;
     }
-    & .full-stars, .empty-stars{
+    & .full-star, .empty-star{
         font-size: 13px;
-        display: flex;
-        gap: 7px;
     }
 
     /****** DESKTOP ******//****** DESKTOP ******//****** DESKTOP ******/
     
     @media(min-width:1024px){
-        & .full-stars, .empty-stars{
+        gap: 15px;
+        & .full-star, .empty-star{
             font-size: 24px;
-            gap: 15px;
         } 
     }
 
     /****** TABLETTE ******//****** TABLETTE ******//****** TABLETTE ******/
 
     @media(min-width:768px ) and (max-width:1023px){
-        & .full-stars, .empty-stars{
+        gap: 10px;
+        & .full-star, .empty-star{
             font-size: 18px;
-            gap: 10px;
         } 
     }
 }
