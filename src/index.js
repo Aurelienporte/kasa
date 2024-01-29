@@ -13,20 +13,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Header></Header>
-      {/* <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/Apropos' element={<Apropos />}></Route>
-        <Route path='/Logement' element={<Logement/>}></Route>
-        {annonces.map(annonce =>
-          <Route
-            key={annonce.id}
-            path={'/Logement/'+annonce.id}
-            element={<Logement/>}>
-          </Route>)}
-
-        <Route path='/*' element={<Page404 />}></Route>
-      </Routes> */}
-     <KasaRoutes></KasaRoutes>
+      <KasaRoutes></KasaRoutes>
     </BrowserRouter>
     <Footer />
   </React.StrictMode>

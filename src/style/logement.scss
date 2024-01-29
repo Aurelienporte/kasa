@@ -3,20 +3,24 @@
     flex-flow: column;
     align-items: center;
     padding: 27px 20px;
-    h1, .location{
-        color: #ff6060;
+    .info-container{
         width: 100%;
-        text-align: left;
+        h1, .location{
+            color: #ff6060;
+            width: 100%;
+            text-align: left;
+        }
+        h1{
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 14px;
+        }
+        .location{
+            font-size: 15px;
+            margin: 16px 0 13px;
+        }
     }
-    h1{
-        font-size: 18px;
-        font-weight: 500;
-        margin-top: 14px;
-    }
-    .location{
-        font-size: 15px;
-        margin: 16px 0 13px;
-    }
+
     .tags-array{
         display: flex;
         flex-flow: row wrap;
@@ -72,7 +76,6 @@
         .info-container{
             display: flex;
             justify-content: space-between;
-            width: 100%;
             margin-top: 24px;
             .accomodation-info{
                 h1{
@@ -123,7 +126,6 @@
         .info-container{
             display: flex;
             justify-content: space-between;
-            width: 100%;
             margin-top: 24px;
             .accomodation-info{
                 h1{
